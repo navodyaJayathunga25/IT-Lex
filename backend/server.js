@@ -6,7 +6,6 @@ import cors from 'cors';
 dotenv.config(); // load .env
 
 // Import routes
-import faqRouter from './routes/faqRouter.js';
 
 console.log("Starting server...");
 console.log("MONGO_URI =", process.env.MONGO_URI);
@@ -18,7 +17,6 @@ app.use(cors());
 app.use(express.json());
 
 // API Routes
-app.use("/api/faqs", faqRouter);
 
 // Connect to MongoDB (updated for Mongoose 9+)
 if (!process.env.MONGO_URI) {
